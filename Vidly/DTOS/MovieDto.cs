@@ -11,7 +11,7 @@ namespace Vidly.DTOS
         [Required]
         public int Id { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Please enter movie's name.")]
         [StringLength(255)]
         public string Name { get; set; }
 
@@ -26,6 +26,9 @@ namespace Vidly.DTOS
 
         [Required]
         public int GenreTypeId { get; set; }
+
+        public GenreTypeDto GenreType { get; set; }
+
 
         public MovieDto()
         {

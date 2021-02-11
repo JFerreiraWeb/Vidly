@@ -82,9 +82,10 @@ namespace Vidly.Controllers
         // GET: Customers
         public ActionResult Index()
         {
-            var customers = _context.Customers.Include(c => c.MembershipType).ToList();
-
-            return View(customers);
+            //changed to get the customers from the api and display with datatables, no longer need this. 
+            //var customers = _context.Customers.Include(c => c.MembershipType).ToList();
+            //customers
+            return View();
         }
 
 
